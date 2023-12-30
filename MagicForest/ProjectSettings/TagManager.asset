@@ -3,16 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Key
+  - EnemyBullet
+  - PlayerBullet
+  - Collision
+  - Foreground
+  - EnemyLimit
+  - EnemyBulletLimit
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Checkground
   - Water
   - UI
-  - 
-  - 
+  - Foreground
+  - BlurCamera
   - 
   - 
   - 
@@ -40,4 +47,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bullet
+    uniqueID: 60675959
+    locked: 0
+  - name: Player
+    uniqueID: 3515729337
+    locked: 0
+  - name: Foreground
+    uniqueID: 799974079
     locked: 0

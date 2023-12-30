@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: 8ae6c50750880a3409aca6e0b39dd8f0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 555
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PinchosRojos_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1115
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 229.5}
+        - {x: 277.5, y: 229.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7047f1f2af5c4c449cfcefa03a6f6b5
+      internalID: 249716793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_1
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1115
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -229.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -229.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b816b9cb4a662214bb48f3146d18d3e1
+      internalID: 1265153746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_2
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 1115
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477c7318247bd9c4eb9a11d514d06d6c
+      internalID: 1128138961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_3
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 1115
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ff4f024b19dc8478e5a0eebc899cd0
+      internalID: 1602011067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 558
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641d9ed2d4fa647418c439f1af0c930c
+      internalID: -548359084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_5
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 558
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9627380caa492514a8cf5da148fd1d13
+      internalID: 478610465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_6
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 558
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a01b0b447323f4ca2fc23dff19c1db
+      internalID: -699063571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_7
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 558
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20587458b4dbcdf4e82dd0a684c0a436
+      internalID: -820395713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b09b3443d672eb44bd75f442ea67396
+      internalID: -1808565992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_9
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 1
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d042a79b9083d248bca378d3246e794
+      internalID: -2088629104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_10
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 1
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5dd8605853167479c861c6352682c5
+      internalID: 1277933751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinchosRojos_11
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 1
+        width: 555
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -277.5, y: -277.5}
+        - {x: -277.5, y: 277.5}
+        - {x: 277.5, y: 277.5}
+        - {x: 277.5, y: -277.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c60776c7806c9b45960d56f5558c426
+      internalID: 1408113641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PinchosRojos_0: 249716793
+      PinchosRojos_1: 1265153746
+      PinchosRojos_10: 1277933751
+      PinchosRojos_11: 1408113641
+      PinchosRojos_2: 1128138961
+      PinchosRojos_3: 1602011067
+      PinchosRojos_4: -548359084
+      PinchosRojos_5: 478610465
+      PinchosRojos_6: -699063571
+      PinchosRojos_7: -820395713
+      PinchosRojos_8: -1808565992
+      PinchosRojos_9: -2088629104
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
