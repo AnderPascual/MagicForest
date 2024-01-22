@@ -54,6 +54,13 @@ public class GameManager : MonoBehaviour
             StartCoroutine(WaitLoadLevel());
         }
     }
+    public void IncrementLife()
+    {
+        if (lives < 3)
+        {
+            lives++;
+        }
+    }
 
     IEnumerator WaitLoadLevel()
     {
