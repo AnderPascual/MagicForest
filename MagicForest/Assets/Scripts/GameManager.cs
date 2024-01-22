@@ -143,4 +143,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Quit Game");
         Application.Quit();
     }
+    public void StartCredits()
+    {
+        SceneManager.LoadScene("CreditsScene");
+    }
+
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
 }
