@@ -137,4 +137,10 @@ public class GameManager : MonoBehaviour
             Destroy(Spikes);
         }
     }
+
+    public void QuitGame() 
+    {
+        Debug.Log("Quit Game");
+        Application.Quit();
+    }
 }
