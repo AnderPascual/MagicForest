@@ -55,7 +55,7 @@ public class GhostEnemy : MonoBehaviour
     {
         if (DestinoActual.x > transform.position.x)
         {
-            transform.localScale = Vector3.one*2;
+            transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
         }
         else
         {
@@ -73,8 +73,8 @@ public class GhostEnemy : MonoBehaviour
         }
         if (elOtro.CompareTag("PlayerBullet"))
         {
-            Debug.Log("me da");
-            Destroy(gameObject);
+          
+      
             audioSourceSlime.Play();
             Destroy(gameObject, audioSourceSlime.clip.length);
         }

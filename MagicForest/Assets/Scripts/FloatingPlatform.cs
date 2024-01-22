@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BatEnemy : MonoBehaviour
+public class FloatingPlatform : MonoBehaviour
 {
+    private Rigidbody2D rb;
+
     [SerializeField] Transform[] puntos;
     [SerializeField] float velocidadPatrulla;
-    [SerializeField] float danhoAtaque;
     private Vector3 DestinoActual;
     private int indiceActual = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +68,10 @@ public class BatEnemy : MonoBehaviour
             PlayerController pController = elOtro.gameObject.GetComponent<PlayerController>();
             pController.Dead();
 
+        }
+        if (elOtro.CompareTag("PlayerBullet"))
+        {
+            Destroy(gameObject);
         }
     }
 }
