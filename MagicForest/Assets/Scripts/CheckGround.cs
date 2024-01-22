@@ -6,9 +6,12 @@ public class CheckGround : MonoBehaviour
 {
     public static bool isGrounded;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        isGrounded = true;
+        if (collision.CompareTag("Wall") || collision.CompareTag("Foreground"))
+        {
+            isGrounded = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

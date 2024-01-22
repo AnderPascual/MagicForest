@@ -11,6 +11,7 @@ TagManager:
   - Foreground
   - EnemyLimit
   - EnemyBulletLimit
+  - Wall
   layers:
   - Default
   - TransparentFX
