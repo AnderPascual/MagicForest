@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -14,11 +16,13 @@ public class GameManager : MonoBehaviour
     public static int level = 1;
     private static int lives = 3;
     private int numKeyPlants;
+    private static Timer timer;
 
     [SerializeField] private int numlevels = 2;
     [SerializeField] private GameObject Spikes;
     [SerializeField] private Image[] livesUI;
-    
+    [SerializeField] private TMP_Text timerText;
+
 
 
     private void Awake()
@@ -26,6 +30,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            InitializeTimer();//Para que arranque el timer
         }
         else
         {
@@ -37,6 +42,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         ManageLivesUI();
+        UpdateTimer();
     }
 
     private void Start()
@@ -151,5 +157,19 @@ public class GameManager : MonoBehaviour
     public void ReturnMainMenu()
     {
         SceneManager.LoadScene("StartScene");
+    }
+
+    private void InitializeTimer()
+    {
+        timer = gameObject.AddComponent<Timer>();
+        timer.timerText = timerText; 
+    }
+
+    private void UpdateTimer()
+    {
+        if (timer != null)
+        {
+            timer.UpdateTimer();
+        }
     }
 }
