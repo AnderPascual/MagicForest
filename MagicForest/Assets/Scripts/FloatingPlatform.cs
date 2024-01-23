@@ -46,32 +46,26 @@ public class FloatingPlatform : MonoBehaviour
             indiceActual = 0;
         }
         DestinoActual = puntos[indiceActual].position;
-        EnfocarDestino();
+       
     }
 
-    private void EnfocarDestino()
-    {
-        if (DestinoActual.x > transform.position.x)
-        {
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        }
-        else
-        {
-            transform.localScale = new Vector3(transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z);
-        }
-    }
+   
 
-    private void OnTriggerEnter2D(Collider2D elOtro)
+    private void OnCollisionEnter2D(Collision2D elOtro)
     {
         if (elOtro.gameObject.CompareTag("Player"))
         {
-            PlayerController pController = elOtro.gameObject.GetComponent<PlayerController>();
-            pController.Dead();
-
-        }
-        if (elOtro.CompareTag("PlayerBullet"))
-        {
-            Destroy(gameObject);
+            elOtro.transform.SetParent(this.transform);
+           
         }
     }
+    private void OnCollisionExit2D(Collision2D elOtro)
+    {
+        if (elOtro.gameObject.CompareTag("Player"))
+        {
+            elOtro.transform.SetParent(null);
+        }
+    }
+
+
 }
