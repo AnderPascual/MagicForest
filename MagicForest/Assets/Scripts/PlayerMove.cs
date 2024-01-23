@@ -35,28 +35,40 @@ public class PlayerMove : MonoBehaviour
         {
             Jump();
         }
-        //Move
-        inputH = Input.GetAxisRaw("Horizontal");
-        if (!GameManager.Instance.playerIsDead && timerWall > timeWallJump)
-        {
-            Move();
-        }
+
         //WallSlide
         if (CheckRightWall.isOnWall || CheckLeftWall.isOnWall)
         {
             WallSlide();
         }
 
+        //Move
+        inputH = Input.GetAxisRaw("Horizontal");
+        if (timerWall > timeWallJump && !GameManager.Instance.playerIsDead)
+        {
+            Move();
+        }
+        
         //Jump animation on air
         if (!CheckGround.isGrounded && !GameManager.Instance.playerIsDead)
         {
             animator.SetBool("Jump", true);
             animator.SetBool("Walk", false);
         }
+
+        if (GameManager.Instance.playerIsDead)
+        {
+            playerRb.velocity = Vector2.zero;
+        }
+
         //Deactivate jump anim when grounded
         if (CheckGround.isGrounded)
         {
             animator.SetBool("Jump", false);
+            canDoubleJump = true;
+            canJumpRight = true;
+            canJumpLeft = true;
+            //Debug.Log("Ground");
         }
         //Shift to shoot
         if (Input.GetKeyDown(KeyCode.LeftShift) && GameManager.level > 1 && !GameManager.Instance.playerIsDead)
@@ -67,20 +79,22 @@ public class PlayerMove : MonoBehaviour
 
     private void Move()
     {
-        playerRb.velocity = new Vector2(inputH * runSpeed, playerRb.velocity.y);
-        if (inputH > 0)
+        if (inputH > 0 && !CheckRightWall.isOnWall)
         {
             playerRenderer.flipX = false;
             animator.SetBool("Walk", true);
+            playerRb.velocity = new Vector2(inputH * runSpeed, playerRb.velocity.y);
         }
-        else if (inputH < 0)
+        else if (inputH < 0 && !CheckLeftWall.isOnWall)
         {
             playerRenderer.flipX = true;
             animator.SetBool("Walk", true);
+            playerRb.velocity = new Vector2(inputH * runSpeed, playerRb.velocity.y);
         }
-        else
+        else if (inputH == 0)
         {
             animator.SetBool("Walk", false);
+            playerRb.velocity = new Vector2(inputH * runSpeed, playerRb.velocity.y);
         }
         if (CheckLeftWall.isObstacle)
         {
@@ -101,7 +115,6 @@ public class PlayerMove : MonoBehaviour
             audioSourceJump.Play();
             playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("Walk", false);
-            canDoubleJump = true;
             canJumpLeft = true;
             canJumpRight = true;
         
@@ -114,6 +127,8 @@ public class PlayerMove : MonoBehaviour
             playerRb.AddForce(Vector2.one * jumpForce, ForceMode2D.Impulse);
             playerRenderer.flipX = false;
             timerWall = 0;
+            canJumpLeft = false;
+            canJumpRight = true;
         }
         else if (!CheckGround.isGrounded && CheckRightWall.isOnWall && canJumpRight)
         {
@@ -122,9 +137,11 @@ public class PlayerMove : MonoBehaviour
             playerRb.AddForce(new Vector2(-1, 1) * jumpForce, ForceMode2D.Impulse);
             playerRenderer.flipX = true;
             timerWall = 0;
+            canJumpRight = false;
+            canJumpLeft = true;
         }
         //DoubleJump
-        else if (!CheckGround.isGrounded && canDoubleJump)
+        else if (!CheckGround.isGrounded && !CheckRightWall.isOnWall && !CheckLeftWall.isOnWall && canDoubleJump && GameManager.level > 1)
         {
             audioSourceJump.Play();
             playerRb.velocity = new Vector2(playerRb.velocity.x, 0);
@@ -139,14 +156,12 @@ public class PlayerMove : MonoBehaviour
         if (CheckRightWall.isOnWall)
         {
             playerRenderer.flipX = true;
-            canJumpLeft = false;
-            canJumpRight = true;
+            
         }
         else if (CheckLeftWall.isOnWall)
         {
             playerRenderer.flipX = false;
-            canJumpRight = false;
-            canJumpLeft = true;
         }
+        canDoubleJump = true;
     }
 }
