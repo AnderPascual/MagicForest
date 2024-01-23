@@ -18,6 +18,7 @@ public class PlayerMove : MonoBehaviour
     private float timeWallJump = 0.5f;
     private float timerWall = 0;
     private float wallSlidingSpeed = 2f;
+    
 
     void Start()
     {
@@ -96,12 +97,14 @@ public class PlayerMove : MonoBehaviour
         //NormalJump
         if (CheckGround.isGrounded)
         {
+            
             audioSourceJump.Play();
             playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("Walk", false);
             canDoubleJump = true;
             canJumpLeft = true;
             canJumpRight = true;
+        
         }
         //JumpLeft
         else if (!CheckGround.isGrounded && CheckLeftWall.isOnWall && canJumpLeft)
