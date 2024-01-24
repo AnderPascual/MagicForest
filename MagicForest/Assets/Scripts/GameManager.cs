@@ -15,13 +15,17 @@ public class GameManager : MonoBehaviour
     public bool playerIsDead = false;
     public static int level = 1;
     private static int lives = 3;
-    private int numKeyPlants;
+    private int numKeyPlantsInLevel;
+    private int numKeyPlantsCollected = 0;
     private static Timer timer;
+    private int numLevels = 3;
 
-    [SerializeField] private int numlevels = 2;
-    [SerializeField] private GameObject Spikes;
+    [SerializeField] private AudioSource music;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject spikes;
     [SerializeField] private Image[] livesUI;
     [SerializeField] private TMP_Text timerText;
+    [SerializeField] private TextMeshProUGUI textNumKeyPlants;
 
 
 
@@ -43,12 +47,34 @@ public class GameManager : MonoBehaviour
     {
         ManageLivesUI();
         UpdateTimer();
+        if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu != null)
+        {
+            if (Time.timeScale == 0f)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
     }
 
     private void Start()
     {
         level = SceneManager.GetActiveScene().buildIndex;
         SetNumKeyPlantsInLevel();
+        UpdateKeyPlantsCounter();
+        if (music != null)
+        {
+            music.loop = true;
+            music.Play();
+
+        }
+        if (SceneManager.GetActiveScene().name == "GameOverScene")
+        {
+            StartCoroutine(WaitCredits());
+        }
     }
 
     public void DecreaseLife()
@@ -104,16 +130,27 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("GameOverScene");
         }
-        else if (level > numlevels)
+        else if (level > numLevels)
         {
             SceneManager.LoadScene("WinScene");
         }
         else
         {
+            if (Time.timeScale == 0f)
+            {
+                Time.timeScale = 1f;
+            }
             playerIsDead = false;
             SetNumKeyPlantsInLevel();
             SceneManager.LoadScene(level);
         }
+    }
+
+    IEnumerator WaitCredits()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("CreditsScene");
+
     }
 
     private void SetNumKeyPlantsInLevel()
@@ -121,10 +158,13 @@ public class GameManager : MonoBehaviour
         switch (level)
         {
             case 1:
-                numKeyPlants = 1;
+                numKeyPlantsInLevel = 1;
                 break;
             case 2:
-                numKeyPlants = 2;
+                numKeyPlantsInLevel = 2;
+                break;
+            case 3:
+                numKeyPlantsInLevel = 3;
                 break;
         }
     }
@@ -139,21 +179,22 @@ public class GameManager : MonoBehaviour
     {
         level = 1;
         lives = 3;
+        timer.RestartTimer();
         LoadLevel();
     }
 
     public void GetKey()
     {
-        numKeyPlants--;
-        if (numKeyPlants <= 0)
+        numKeyPlantsCollected++;
+        if (numKeyPlantsCollected == numKeyPlantsInLevel)
         {
-            Destroy(Spikes);
+            Destroy(spikes);
         }
+        UpdateKeyPlantsCounter();
     }
 
     public void QuitGame() 
     {
-        Debug.Log("Quit Game");
         Application.Quit();
     }
     public void StartCredits()
@@ -177,6 +218,34 @@ public class GameManager : MonoBehaviour
         if (timer != null)
         {
             timer.UpdateTimer();
+        }
+    }
+
+    private void UpdateKeyPlantsCounter()
+    {
+        if (textNumKeyPlants != null)
+        {
+            textNumKeyPlants.text = numKeyPlantsCollected + "/" + numKeyPlantsInLevel;
+        }
+    }
+
+    public void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        if (music != null)
+        {
+            music.Pause();
+        }
+    }
+
+    public void ResumeGame()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        if (music != null)
+        {
+            music.UnPause();
         }
     }
 }

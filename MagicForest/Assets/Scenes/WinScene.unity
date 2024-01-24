@@ -182,8 +182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PLAY AGAIN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 96c9ce526ca3e4c458bac71d975ee5b3, type: 2}
+  m_sharedMaterial: {fileID: -7929990421612671676, guid: 96c9ce526ca3e4c458bac71d975ee5b3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -757,10 +757,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1BIEN HECHO!\nGRACIAS POR JUGAR"
+  m_text: 'WELL DONE!
+
+    THANKS FOR PLAYING'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 96c9ce526ca3e4c458bac71d975ee5b3, type: 2}
+  m_sharedMaterial: {fileID: -7929990421612671676, guid: 96c9ce526ca3e4c458bac71d975ee5b3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -960,11 +962,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12d7b46c4d4e4fa4ea53034e1c55e801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGameOver: 0
-  audioSourceSong: {fileID: 1032367682}
+  playerIsDead: 0
+  music: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  spikes: {fileID: 0}
   livesUI: []
-  numlevels: 2
-  Spikes: {fileID: 0}
+  timerText: {fileID: 0}
+  textNumKeyPlants: {fileID: 0}
 --- !u!4 &1032367684
 Transform:
   m_ObjectHideFlags: 0

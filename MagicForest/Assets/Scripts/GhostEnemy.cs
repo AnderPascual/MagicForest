@@ -13,14 +13,12 @@ public class GhostEnemy : MonoBehaviour
     private Vector3 DestinoActual;
     private int indiceActual = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         DestinoActual = puntos[indiceActual].position;
         StartCoroutine("Patrulla");
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -29,8 +27,6 @@ public class GhostEnemy : MonoBehaviour
     {
         while (true)
         {
-
-
             while (transform.position != DestinoActual)
             {
                 transform.position = Vector3.MoveTowards(transform.position, DestinoActual, velocidadPatrulla * Time.deltaTime);
@@ -67,14 +63,12 @@ public class GhostEnemy : MonoBehaviour
     {
         if (elOtro.gameObject.CompareTag("Player"))
         {
-           PlayerController pController = elOtro.gameObject.GetComponent<PlayerController>();
+            PlayerController pController = elOtro.gameObject.GetComponent<PlayerController>();
             pController.Dead();
 
         }
         if (elOtro.CompareTag("PlayerBullet"))
         {
-          
-      
             audioSourceSlime.Play();
             Destroy(gameObject, audioSourceSlime.clip.length);
         }

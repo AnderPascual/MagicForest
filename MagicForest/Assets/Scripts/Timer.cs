@@ -12,12 +12,20 @@ public class Timer : MonoBehaviour
 
     public void UpdateTimer()
     {
-        timeElapsed += Time.deltaTime;
-        minutes = (int)(timeElapsed / 60F);
-        seconds = (int)(timeElapsed - minutes * 60f);
-        cents = (int)((timeElapsed - (int)timeElapsed) * 100f);
+        if (timerText != null)
+        {
+            timeElapsed += Time.deltaTime;
+            minutes = (int)(timeElapsed / 60F);
+            seconds = (int)(timeElapsed - minutes * 60f);
+            cents = (int)((timeElapsed - (int)timeElapsed) * 100f);
 
-        timerText.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, cents);
+            timerText.text = string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, cents);
+        }
+    }
+
+    public void RestartTimer()
+    {
+        timeElapsed = 0f;
     }
 }
 

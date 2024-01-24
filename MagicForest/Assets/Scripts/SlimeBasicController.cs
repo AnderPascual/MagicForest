@@ -8,14 +8,12 @@ public class SlimeBasicController : MonoBehaviour
     [SerializeField] private float runSpeed = 5;
     private Rigidbody2D slimeRb;
     private SpriteRenderer slimeRenderer;
-    private Collider2D slimeSollider;
     [SerializeField] private AudioSource audioSourceSlime;
 
     void Start()
     {
         slimeRb = GetComponent<Rigidbody2D>();
         slimeRenderer = GetComponent<SpriteRenderer>();
-        slimeSollider = GetComponent<Collider2D>();
     }
 
     void Update()
